@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         //7.4ターミナルでマイグレーション実行後、エラーが発生した為下記コード追加
         Schema::defaultStringLength(191);
 
-            if (\App::enviroment(['production'])) {
+            if (\App::environment(['production'])) {
                 \URL::forceScheme('https');
             }
     }
