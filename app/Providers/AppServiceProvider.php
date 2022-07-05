@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-//ターミナルでマイグレーション実行後、エラーが発生した為下記コード追加
+//7.4ターミナルでマイグレーション実行後、エラーが発生した為下記コード追加
 use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //ターミナルでマイグレーション実行後、エラーが発生した為下記コード追加
+        //7.4ターミナルでマイグレーション実行後、エラーが発生した為下記コード追加
         Schema::defaultStringLength(191);
 
             if (\App::enviroment(['production'])) {
